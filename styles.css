@@ -33,10 +33,33 @@
   height: 160px;
   color: #000;
 }
-.data-icon {
+.diamond-container-data {
+  width: 695.65px;
+  height: 668.65px;
+  position: relative;
+  overflow: hidden;
+  transform: rotate(45deg);
+  background: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.08);
+  margin-top: 121px; /* Adjust the margin to move the diamond down */
+  border: 30px solid white; /* Add a 3px white solid border */
+  border-radius: 20px;
+  border-image: 30 round;
+  transition: transform 0.3s;
+}
+
+.diamond-shape-data {
+  /* Don't add any rotation to the diamond shape */
   position: absolute;
-  top: -12.86px;
-  left: -16.86px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.data-icon {
   border-radius: 80px;
   width: 955.38px;
   height: 955.38px;
@@ -77,8 +100,9 @@
 }
 .innovation-icon {
   position: absolute;
-  top: -21.15px;
-  left: -25.15px;
+  top: 50%; /* Move the image 50% from the top */
+  left: 50%; /* Move the image 50% from the left */
+  transform: translate(-50%, -50%);
   border-radius: 60px;
   width: 550.62px;
   height: 550.62px;
@@ -87,14 +111,62 @@
 .innovation4 {
   position: absolute;
   top: 232.34px;
-  left: 175.16px;
+  left: 105.16px;
   line-height: 35px;
   text-transform: capitalize;
   opacity: 0.8;
 }
+.diamond-container {
+  width: 323.783px;
+  height: 303.783px;
+  position: relative;
+  overflow: hidden;
+  transform: rotate(45deg);
+  background: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.08);
+  margin-top: 50px;
+  border: 30px solid white;
+  border-radius: 20px;
+  border-image: 30 round;
+  transition: transform 0.3s;
+}
+
+.diamond-container::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background: black;
+  opacity: 0;
+  transition: width 0.3s, opacity 0.3s;
+}
+
+.diamond-container:hover {
+  transform: scale(1.2);
+}
+
+.diamond-container:hover::before {
+  width: 100%;
+  opacity: 1;
+}
+
+.diamond-shape {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
 .innovation3 {
   position: absolute;
-  top: 210.66px;
+  top: 210.66px; /* Adjust this value as needed */
   left: 0;
   width: 500.33px;
   height: 500.33px;
@@ -102,7 +174,7 @@
 .risk-management1 {
   position: absolute;
   top: 232px;
-  left: 121.16px;
+  left: 101.16px;
   line-height: 35px;
   text-transform: capitalize;
   opacity: 0.8;
@@ -114,6 +186,7 @@
   left: 1162px;
   width: 500.33px;
   height: 500.33px;
+  margin-top: 30px;
 }
 .slidercontent {
   top: 2329px;
@@ -124,7 +197,7 @@
 }
 .slider-icon {
   position: absolute;
-  top: 3273px;
+  top: 3370px;
   left: 814px;
   width: 292px;
   height: 44px;
@@ -325,6 +398,7 @@
   overflow: hidden;
   max-height: 100%;
 }
+
 .logo-icon {
   height: 2.4%;
   width: 7.76%;
