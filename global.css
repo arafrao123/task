@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-raleway: Raleway;
+
+  /* font sizes */
+  --font-size-xl: 20px;
+  --font-size-base: 16px;
+  --font-size-41xl: 60px;
+  --font-size-11xl: 30px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-black: #000;
+  --color-lavender: #cfeafb;
+
+  /* Border radiuses */
+  --br-xl: 20px;
+  --br-41xl: 60px;
+  --br-5xs: 8px;
+}
